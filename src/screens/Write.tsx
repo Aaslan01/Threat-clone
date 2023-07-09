@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Prayer = () => {
+const Write = () => {
   return (
     <View>
-      <Text>Prayer</Text>
+      <Text>Write</Text>
     </View>
   )
 }
 
-export default Prayer
+export default Write

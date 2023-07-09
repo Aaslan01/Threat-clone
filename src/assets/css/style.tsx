@@ -337,6 +337,9 @@ const styles = StyleSheet.create({
   bgcolorlightgrey3: {
     backgroundColor: "#F2F2F2",
   },
+  primaryBlackBG:{
+    backgroundColor: '#1C1C1C'
+  },
   bggreyy: { backgroundColor: "#EDEDED" },
   bggreyy2: { backgroundColor: "#ECECEC" },
   // Background Colors
@@ -762,14 +765,9 @@ const styles = StyleSheet.create({
   },
   //Text Transform
 
-  Container: {
+  ContainerBlack: {
     flex: 1,
-    backgroundColor: "white",
-    // padding: 16,
-  },
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: '#1C1C1C',
   },
 
   map: {
@@ -958,6 +956,7 @@ const styles = StyleSheet.create({
 
 export const colors = {
   primary: "#00604C",
+  primaryBlack: '#1C1C1C',
   secondary: "#246C6F",
   success: "#27AE60",
   pending: "#E2B93B",

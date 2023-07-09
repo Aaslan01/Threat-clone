@@ -3,10 +3,16 @@ import * as React from 'react';
 import {Image, Platform, Text, View} from 'react-native';
 import styles, {colors} from '../assets/css/style';
 import Home from '../screens/Home';
-import Azkar from '../screens/Azkar';
-import Prayer from '../screens/Prayer';
-import More from '../screens/More';
-import Quran from '../screens/Quran';
+import Activity from '../screens/Activity';
+import Search from '../screens/Search';
+import Write from '../screens/Write';
+import Profile from '../screens/Profile';
+import HomeSVG from '../assets/svgs/HomeSVG';
+import SearchSVG from '../assets/svgs/SearchSVG';
+import WriteSVG from '../assets/svgs/WriteSVG';
+import HeartSVG from '../assets/svgs/HeartSVG';
+import SettingSVG from '../assets/svgs/SettingSVG';
+import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,10 +24,10 @@ export default function MainTabScreen() {
         tabBarShowLabel: false,
         tabBarHideOnKeyboard: true,
         tabBarStyle: [
-          styles.bggreyy2,
+          styles.primaryBlackBG,
           Platform.OS === 'ios' && styles.pv15,
           Platform.OS === 'ios' && styles.pt30,
-          {height: 84, borderTopWidth: 2, borderColor: colors.primary},
+          {height: hp(7), borderColor: colors?.primaryBlack},
         ],
       }}>
       <Tab.Screen
@@ -31,23 +37,21 @@ export default function MainTabScreen() {
           tabBarIcon: ({focused, size}) => {
             return (
               <View style={styles.center}>
-                {/* <KabahIcon /> */}
-                <Text style={styles.bottomTabText}>Home</Text>
+                <HomeSVG />
               </View>
             );
           },
         })}
       />
       <Tab.Screen
-        name="Prayer"
-        component={Prayer}
+        name="Search"
+        component={Search}
         initialParams={{selectedArea: []}}
         options={() => ({
           tabBarIcon: ({focused, size}) => {
             return (
               <View style={styles.center}>
-                {/* <Vault /> */}
-                <Text style={styles.bottomTabText}>Search</Text>
+                <SearchSVG />
               </View>
             );
           },
@@ -55,42 +59,39 @@ export default function MainTabScreen() {
       />
 
       <Tab.Screen
-        name="More"
-        component={More}
+        name="Write"
+        component={Write}
         options={() => ({
           tabBarIcon: ({focused, size}) => {
             return (
               <View style={styles.center}>
-                {/* <MoreIcon /> */}
-                <Text style={styles.bottomTabText}>Write</Text>
+                <WriteSVG />
               </View>
             );
           },
         })}
       />
       <Tab.Screen
-        name="Azkar"
-        component={Azkar}
+        name="Activity"
+        component={Activity}
         options={() => ({
           tabBarIcon: ({focused, size}) => {
             return (
               <View style={styles.center}>
-                {/* <TasbiIcon /> */}
-                <Text style={styles.bottomTabText}>Heart</Text>
+                <HeartSVG />
               </View>
             );
           },
         })}
       />
       <Tab.Screen
-        name="Quran"
-        component={Quran}
+        name="Profile"
+        component={Profile}
         options={() => ({
           tabBarIcon: ({focused, size}) => {
             return (
               <View style={styles.center}>
-                {/* <QuranIcon /> */}
-                <Text style={styles.bottomTabText}>Setting</Text>
+                <SettingSVG />
               </View>
             );
           },
