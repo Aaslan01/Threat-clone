@@ -957,7 +957,7 @@ const styles = StyleSheet.create({
 export const colors = {
   primary: "#00604C",
   primaryBlack: '#1C1C1C',
-  secondary: "#246C6F",
+  secondaryText: "#6B6B6B",
   success: "#27AE60",
   pending: "#E2B93B",
   removed: "#FF7A00",

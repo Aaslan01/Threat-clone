@@ -8,13 +8,13 @@ import {postData} from '../utils/staticData';
 const Home = () => {
   return (
     <View style={[styles.ContainerBlack]}>
+      <ScrollView >
       <Image
         style={{height: hp(6), width: hp(6), alignSelf: 'center'}}
         source={require('../assets/images/blackLogo.png')}
       />
-      <ScrollView >
         {postData.map(item => (
-          <PostContainer title={item?.title} text={item?.text} image={item?.image} />
+          <PostContainer title={item?.title} text={item?.text} image={item?.image} likes={item?.likes} replies={item?.replies}/>
         ))}
       </ScrollView>
     </View>

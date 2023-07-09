@@ -9,9 +9,17 @@ interface PostContainerProps {
   text: string;
   title: string;
   image: any;
+  likes: number;
+  replies: number;
 }
 
-const PostContainer = ({text, title, image}: PostContainerProps) => {
+const PostContainer = ({
+  text,
+  title,
+  image,
+  likes,
+  replies,
+}: PostContainerProps) => {
   return (
     <View style={[styles.w100]}>
       <View style={[styles.ph16, styles.fdr]}>
@@ -39,7 +47,7 @@ const PostContainer = ({text, title, image}: PostContainerProps) => {
           ]}>
           <Text
             style={{
-              color: '#BBBBBB',
+              color: colors?.secondaryText,
               fontSize: 14,
               fontWeight: '600',
               marginRight: 10,
@@ -75,6 +83,17 @@ const PostContainer = ({text, title, image}: PostContainerProps) => {
           source={image}
         />
         <PostButton />
+        <Text
+          style={{
+            fontSize: 12,
+            fontWeight: '500',
+            fontStyle: 'italic',
+            color: '#6B6B6B',
+            paddingLeft: 5,
+            marginTop: 4,
+          }}>
+          {replies} replies {likes} likes
+        </Text>
       </View>
       <View
         style={{
