@@ -1,51 +1,49 @@
 import * as React from "react"
 import Svg, { Path } from "react-native-svg"
 
-function PostSVG(props:any) {
+function SvgComponent(props: any) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="#bbb"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
+      fill="#fff"
+      width="20"
+      height="20"
+      viewBox="0 0 22 22"
       data-name="Flat Line"
       className="icon flat-line"
-      stroke="#bbb"
-      transform="matrix(0 -1 -1 0 0 0)"
       {...props}
     >
       <Path
-        d="M6 14V9a6 6 0 0110.89-3.46"
+        d="M14 6H4a1 1 0 00-1 1v10a1 1 0 001 1h2"
         fill="none"
-        stroke="#bbb"
+        stroke="#fff"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
       />
       <Path
         data-name="primary"
-        d="M18 10v5a6 6 0 01-10.89 3.46"
+        d="M10 18h10a1 1 0 001-1V7a1 1 0 00-1-1h-2"
         fill="none"
-        stroke="#bbb"
+        stroke="#fff"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
       />
       <Path
         data-name="primary"
-        d="M8 12L6 14 4 12"
+        d="M12 4L14 6 12 8"
         fill="none"
-        stroke="#bbb"
+        stroke="#fff"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
       />
       <Path
         data-name="primary"
-        d="M16 12L18 10 20 12"
+        d="M12 20L10 18 12 16"
         fill="none"
-        stroke="#bbb"
+        stroke="#fff"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
@@ -54,4 +52,4 @@ function PostSVG(props:any) {
   )
 }
 
-export default PostSVG
+export default SvgComponent
