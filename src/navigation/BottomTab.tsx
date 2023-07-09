@@ -37,7 +37,7 @@ export default function MainTabScreen() {
           tabBarIcon: ({focused, size}) => {
             return (
               <View style={styles.center}>
-                <HomeSVG />
+                {focused ? <HomeSVG background={'white'} /> : <HomeSVG />}
               </View>
             );
           },
@@ -51,7 +51,7 @@ export default function MainTabScreen() {
           tabBarIcon: ({focused, size}) => {
             return (
               <View style={styles.center}>
-                <SearchSVG />
+                {focused ? <SearchSVG background={'white'} /> : <SearchSVG />}
               </View>
             );
           },
@@ -78,7 +78,7 @@ export default function MainTabScreen() {
           tabBarIcon: ({focused, size}) => {
             return (
               <View style={styles.center}>
-                <HeartSVG />
+                {focused ? <HeartSVG background={'white'} /> : <HeartSVG />}
               </View>
             );
           },
@@ -91,7 +91,7 @@ export default function MainTabScreen() {
           tabBarIcon: ({focused, size}) => {
             return (
               <View style={styles.center}>
-                <SettingSVG />
+                {focused ? <SettingSVG background={'white'} /> : <SettingSVG />}
               </View>
             );
           },

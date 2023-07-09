@@ -9,7 +9,7 @@ function SearchSVG(props:any) {
       height="30"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#BBB"
+      stroke={props?.background??"#6B6B6B"}
       {...props}
     >
       <Path
