@@ -9,7 +9,7 @@ function HeartSVG(props: any) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke={props?.background ??"#6B6B6B"}
+      stroke={props?.background != ''?props?.background:"#6B6B6B"}
       {...props}
     >
       <Path
@@ -17,7 +17,7 @@ function HeartSVG(props: any) {
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
-        fill={props?.background ?? '#1C1C1C'}
+        fill={props?.background != ''?props?.background: '#1C1C1C'}
       />
     </Svg>
   )
