@@ -3,7 +3,7 @@ import * as React from 'react';
 import {Image, Platform, Text, View} from 'react-native';
 import styles, {colors} from '../assets/css/style';
 import Home from '../screens/Home';
-import Activity from '../screens/Activity';
+import Activity from '../screens/Activity/Activity';
 import Search from '../screens/Search';
 import Write from '../screens/Write';
 import Profile from '../screens/Profile';
