@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
   w60: { width: "60%" },
   h50: { height: "50%" },
   w25: { width: "25%" },
+  w10: { width: "16%" },
   h25: { height: "25%" },
   w75: { width: "75%" },
   h75: { height: "75%" },

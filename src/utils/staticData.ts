@@ -18,6 +18,139 @@ export interface followType {
   image: any;
   followers: string;
 }
+export interface ActivityType {
+  id: number;
+  flag?: string;
+  title: string;
+  text: string;
+  comment?: string;
+  image: any;
+  time: string;
+}
+
+export const ActivityData: Array<ActivityType> = [
+  {
+    id: 1,
+    flag: 'follow',
+    title: 'andyfriseella',
+    text: 'Andy Friseella MFCEO',
+    image: require('../assets/images/post1.jpeg'),
+    time: '1h',
+  },
+  {
+    id: 2,
+    flag: 'Reply',
+    title: 'gilbert_burns',
+    text: `GILBERT BURNS "BURINHO"`,
+    image: require('../assets/images/post2.jpeg'),
+    time: '3h',
+  },
+  {
+    id: 3,
+    flag: 'follow',
+    title: 'publicityLates',
+    text: 'Latest News Updates?',
+    image: require('../assets/images/post3.jpeg'),
+    time: '4h',
+  },
+  {
+    id: 4,
+    title: 'sarcastic_us',
+    text: '',
+    comment: 'I will Check it out',
+    image: require('../assets/images/post4.jpeg'),
+    time: '9h',
+  },
+  {
+    id: 5,
+    flag: 'Reply',
+    title: 'shakira',
+    text: 'Shakira',
+    image: require('../assets/images/post5.jpeg'),
+    time: '15h',
+  },
+  {
+    id: 6,
+    title: 'benfrancis',
+    text: 'Ben Francis MBE',
+    comment: 'I will Check it out',
+    image: require('../assets/images/post1.jpeg'),
+    time: '18h',
+  },
+  {
+    id: 7,
+    title: 'john',
+    flag: 'follow',
+    text: 'John Shahidi',
+    image: require('../assets/images/post2.jpeg'),
+    time: '19h',
+  },
+  {
+    id: 8,
+    title: 'pgbazaar',
+    text: 'PG bazar',
+    image: require('../assets/images/post3.jpeg'),
+    time: '22h',
+    comment: 'I will Check it out',
+  },
+  {
+    id: 9,
+    comment: 'good what about you',
+    title: 'shkhrasheed1',
+    text: 'Sheikh Rasheed Ahmed',
+    image: require('../assets/images/post4.jpeg'),
+    time: '23h',
+  },
+  {
+    id: 10,
+    title: 'thecurrentpk',
+    flag: 'follow',
+    text: 'The Current',
+    image: require('../assets/images/post5.jpeg'),
+    time: '1d',
+  },
+  {
+    id: 11,
+    flag: 'Reply',
+    title: 'john',
+    text: 'John Shahidi',
+    image: require('../assets/images/post2.jpeg'),
+    time: '1d',
+  },
+
+  {
+    id: 12,
+    flag: 'follow',
+    time: '1d',
+    title: 'arielhelwani',
+    text: 'Ariel Helwani',
+    image: require('../assets/images/post2.jpeg'),
+  },
+  {
+    id: 13,
+    flag: 'Reply',
+    title: 'benfrancis',
+    text: 'Ben Francis MBE',
+    image: require('../assets/images/post1.jpeg'),
+    time: '1d',
+  },
+  {
+    id: 14,
+    title: 'john',
+    flag: 'follow',
+    text: 'John Shahidi',
+    image: require('../assets/images/post2.jpeg'),
+    time: '2d',
+  },
+  {
+    id: 15,
+    flag: 'Reply',
+    title: 'pgbazaar',
+    text: 'PG bazar',
+    image: require('../assets/images/post3.jpeg'),
+    time: '2d',
+  },
+];
 
 export const followData: Array<followType> = [
   {

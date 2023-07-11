@@ -18,18 +18,25 @@ const Search = () => {
         </Text>
         <View
           style={[
-            styles.mh16,
-          styles.mb10,
+            styles.mb10,
             {
+              marginHorizontal: '4%',
               flexDirection: 'row',
-              backgroundColor: colors.grey1,
+              backgroundColor: colors.secondaryText,
               paddingHorizontal: 10,
               borderRadius: 4,
-              width: '90%',
+              width: '92%',
             },
           ]}>
-          <SearchIcon style={{marginTop: 6}} height={16} width={16} />
+          <SearchIcon
+            fill={colors.grey3}
+            style={{marginTop: 6}}
+            height={16}
+            width={16}
+          />
           <TextInput
+            placeholder="Search"
+            placeholderTextColor={colors.grey3}
             style={{
               height: 30,
               padding: 0,

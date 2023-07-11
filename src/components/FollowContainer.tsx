@@ -1,5 +1,5 @@
 import {View, Text, TouchableOpacity, Image} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import styles, {colors} from '../assets/css/style';
 
 interface FollowContainerProps {
@@ -14,6 +14,8 @@ const FollowContainer = ({
   image,
   followers,
 }: FollowContainerProps) => {
+  const [follow, setFollow] = useState<boolean>(false);
+  console.log('====================================');
   return (
     <TouchableOpacity style={[styles.fdr]}>
       <View style={{width: '12%', paddingLeft: 16}}>
@@ -45,19 +47,26 @@ const FollowContainer = ({
         </Text>
 
         <TouchableOpacity
+          onPress={() => setFollow(!follow)}
           style={[
-            styles.ph25,
+            styles.center,
             styles.pv5,
             {
               borderWidth: 1,
               borderColor: colors.secondaryText,
               borderRadius: 8,
               position: 'absolute',
-              right: 10,
+              right: "4%",
+              width: '30%'
             },
           ]}>
-          <Text style={{fontSize: 14, fontWeight: '600', color: '#FFFFFF'}}>
-            Follow
+          <Text
+            style={{
+              fontSize: 14,
+              fontWeight: '600',
+              color: follow ? colors.secondaryText : '#FFFFFF',
+            }}>
+            {follow ? 'Following' : 'Follow'}
           </Text>
         </TouchableOpacity>
         <View
